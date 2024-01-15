@@ -235,7 +235,7 @@ function node_map_to_install_config_hosts() {
              boot_mode="UEFI"
       fi
 
-      v6addr=$(ip -br -f inet6 addr show ostestbm | awk '{print $3;}' | sed 's|/.*||')
+      v6addr=$(ip -br -f inet6 addr show jhajyahy-ssbm | awk '{print $3;}' | sed 's|/.*||')
       address=$(echo "$address" | sed "s|192.*:|[$v6addr]:|")
 
       cat << EOF
